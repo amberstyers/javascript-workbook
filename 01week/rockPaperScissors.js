@@ -9,10 +9,21 @@ const rl = readline.createInterface({
 
 
 function rockPaperScissors(hand1, hand2) {
+  let first = hand1.trim().toLowerCase();
+  let second = hand2.trim().toLowerCase();
 
-  // Write code here
+  if(first === second){
+    return "It's a tie!"
+  }
+  else if (first === "rock" && second === "paper"){
+    return "Hand two wins!"
+  }
+  else if (first === "paper" && second === "scissors"){
+    return "Hand two wins!"
+  }
 
 }
+
 
 function getPrompt() {
   rl.question('hand1: ', (answer1) => {

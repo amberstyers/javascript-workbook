@@ -6,11 +6,12 @@ const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
+//create const of vowels = ['a''e''i''o''u'] car.split("")=>arr loop() arr [0]== a
 
 
 function pigLatin(word) {
 
-  // Your code here
+  
 
 }
 
