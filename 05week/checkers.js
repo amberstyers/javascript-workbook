@@ -13,8 +13,11 @@ function Checker() {
 }
 
 class Board {
-  constructor() {
-    this.grid = []
+  constructor(grid, checkers,) {
+    this.grid = [],
+    this.redPiece = "R",
+    this.blackPiece = "B",
+    this.checkers = []
   }
   // method that creates an 8x8 array, filled with null values
   createGrid() {
@@ -51,6 +54,15 @@ class Board {
     }
     console.log(string);
   }
+  initializeGrid(){
+    for(let row1 =0; row1 < 3; row1++){
+      for(let col1 = 0; col1 < 3; col1++){
+        if(row1 % 2 ===0 && col1 % 2 === 1){
+          this.grid[row1][col1] = this.redPiece;
+        }
+      }
+    }
+  }
 
   // Your code here
 }
@@ -61,6 +73,7 @@ class Game {
   }
   start() {
     this.board.createGrid();
+    this.board.initializeGrid();
   }
 }
 
