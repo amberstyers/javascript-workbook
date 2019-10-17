@@ -77,7 +77,7 @@ if (typeof describe === 'function') {
       assert.deepEqual(stacks, { a: [4, 3, 2], b: [1], c: [] });
     });
   });
-
+// added test for move piece, some errors, though
   describe('#movePiece()', () => {
     it('shold move piece', () => {
       stacks = {
