@@ -78,6 +78,17 @@ if (typeof describe === 'function') {
     });
   });
 
+  describe('#movePiece()', () => {
+    it('shold move piece', () => {
+      stacks = {
+        a: [4, 3, 2],
+        b: [1],
+        c: []
+      };
+      assert.equal(isLegal('a', 'c'), true);
+    });
+  });
+
   describe('#isLegal()', () => {
     it('should not allow an illegal move', () => {
       stacks = {
