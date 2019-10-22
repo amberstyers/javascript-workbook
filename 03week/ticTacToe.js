@@ -31,11 +31,15 @@ function horizontalWin() {
 }
 
 function verticalWin() {
-  // Your code here
+  let vWin = board [0][0];
+  if ((board [0][0] == playerTurn && board [1][0] == playerTurn && board [2][0] == playerTurn) || (board[0][1] == playerTurn && board[1][1] == playerTurn && board[2][2] == playerTurn) || (board[0][2] == playerTurn && board[1][2] == playerTurn && board[2][2] == playerTurn)) {
+    return true;
 }
 
 function diagonalWin() {
-  // Your code here
+  let dWin = board [0][0];
+  if ((board [0][0] == playerTurn && board [1][1] == playerTurn && board [2][2] == playerTurn) || (board[0][2] == playerTurn && board[1][1] == playerTurn && board[2][0] == playerTurn)) {
+    return true;
 }
 
 function checkForWin(move) {
